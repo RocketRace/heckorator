@@ -109,13 +109,16 @@ class heck:
                     for row in indexed
                 ]
 
-                text = [
-                    "".join(
-                        char_table[bitmask]
-                        for bitmask in row
-                    )
-                    for row in bitmasks
-                ]
+                text: list[str] = []
+                for row in bitmasks:
+                    chars: list[str] = []
+                    for bitmask in row:
+                        char = char_table.get(bitmask)
+                        assert char, (
+                            f"the current font doesn't have a character for the bitmask {bitmask:0{glyph_height * glyph_width}b}"
+                        )
+                        chars.append(char)
+                    text.append("".join(chars))
 
                 fns: list[Any] = []
                 for line in text:
