@@ -55,10 +55,10 @@ _.font("path/to/font/file")
 
 And then stretch your pixel art muscles!
 
-`heckorator` parses the pixel data of decorators as a string of characters based on a font file which can be specified by the user. By default, it uses the [creep](https://github.com/romeovs/creep) font. The font has to be monospace, and you must include the space used for ascenders & descenders in your decorator even if your text doesn't need it.
+`heckorator` parses the pixel data of decorators as a string of characters based on a font file which can be specified by the user. By default, it uses the [Cozette](https://github.com/slavfox/Cozette) font. The font has to be monospace, and you must include the space used for ascenders & descenders in your decorator even if your text doesn't need it.
 
 Oh, and do keep in mind, `heckorator` requires you put a border around your decorators! And separate each row and column of text with a gap of 1 empty pixel! It just makes it cleaner and easier to read 😄
 
 ## Licensing acknowledgements etc etc you know the drill go have fun girlies
 
-See the `LICENSE` file. The `heckorator` library is licensed under MIT. The `creep` font is licensed under MIT. Thanks to the qwdies in the QWD discord server for helping me look for nice fonts.
+See the `LICENSE` file. The `heckorator` library is licensed under MIT. The Cozette font is licensed under MIT. Thanks to the qwdies in the QWD discord server for helping me look for nice fonts.

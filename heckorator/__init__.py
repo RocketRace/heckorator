@@ -3,6 +3,8 @@ import functools
 from inspect import currentframe
 from typing import Any, overload
 
+from . import default_font
+
 __all__ = ("_",)
 
 class heck:
@@ -138,21 +140,43 @@ class heck:
 
     def font(self, path: str) -> None:
         '''heck font'''
-        self.font_data = _decode_font(path)
+        self.font_data = parse_font(path)
 
-def _decode_font(path: str) -> tuple[int, int, dict[int, str]]:
-    return (
-        4, 10,
-        {
-            160864512: "x",
-            126230016: "s",
-            430642054214: "[",
-            28349142528: "0",
-            421479457318: "]",
-            512: ".",
-            110728704: "o",
-            244947200: "n",
-        }
-    )
+def parse_font(path: str) -> tuple[int, int, dict[int, str]]:
+    import bdfparser # type: ignore
+    font = bdfparser.Font(path)
+    ascii = range(ord(" "), ord("~") + 1)
+    bitmaps = {
+        c: glyph.draw() # type: ignore
+        for c in ascii if (glyph := 
+            font.glyphbycp(c) # type: ignore
+        ) is not None
+    }
 
-_ = heck(0, 0, _decode_font("creep"))
+    xs: set[int] = set()
+    ys: set[int] = set()
+    for bitmap in bitmaps.values():
+        for y, row in enumerate(bitmap.bindata): # type: ignore
+            for x, bit in enumerate(row):
+                if bit == "1":
+                    xs.add(x)
+                    ys.add(y)
+                
+    left, right = min(xs), max(xs)
+    top, bottom = min(ys), max(ys)
+
+    cropped: dict[int, str] = {
+        functools.reduce(
+            lambda x, y: (x << 1) | y, # type: ignore
+            [
+                bit == "1"
+                for row in glyph.crop(right - left, bottom - top, left, top).bindata # type: ignore
+                for bit in row # type: ignore
+            ]
+        ): chr(c)
+        for c, glyph in bitmaps.items()
+    }
+
+    return (right - left, bottom - top, cropped)
+
+_ = heck(0, 0, default_font.font_data)
