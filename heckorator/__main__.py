@@ -51,7 +51,7 @@ if hasattr(args, "text"):
     y_joined = list(map(concatenate, x_joined))
     # snakes: ch‿cw‿bh‿bw Array str
     # x_joined: (ch×bh)‿cw‿bw Array str
-    # x_joined: (ch×bh)‿(cw×bw) Array str
+    # y_joined: (ch×bh)‿(cw×bw) Array str
     padded = ["".join(row) + "._" for row in y_joined] + ["._" * ((w + 1) * maxlen + 1)]
     cap = ["@_" * ((w + 1) * maxlen + 3)]
     bordered = cap + ["@_" + row + "@_" for row in padded] + cap

@@ -19,20 +19,22 @@ from heckorator import _
 
 xs = [Button(position=i) for i in range(10)]
 
-@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_
-@_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._@_
-@_._._._._._._._._._._._._@_@_._._._._._._._._@_@_._._._._._._._._._._._._._._._._._@_
-@_._._._._._._._._._._._._@_._._._._@_@_._._._._@_._._._._._._._._._._._._._._._._._@_
-@_._._._._._._._._._._._._@_._._._@_._._@_._._._@_._._._._._._._._._._._._._._._._._@_
-@_._@_._._@_._._@_@_@_._._@_._._._@_._._@_._._._@_._._._._._._._._@_@_._._@_@_@_._._@_
-@_._@_._._@_._@_._._._._._@_._._._@_._@_@_._._._@_._._._._._._._@_._._@_._@_._._@_._@_
-@_._._@_@_._._._@_@_._._._@_._._._@_@_._@_._._._@_._._._._._._._@_._._@_._@_._._@_._@_
-@_._@_._._@_._._._._@_._._@_._._._@_._._@_._._._@_._._._._._._._@_._._@_._@_._._@_._@_
-@_._@_._._@_._@_@_@_._._._@_._._._._@_@_._._._._@_._._._._@_._._._@_@_._._@_._._@_._@_
-@_._._._._._._._._._._._._@_._._._._._._._._._._@_._._._._._._._._._._._._._._._._._@_
-@_._._._._._._._._._._._._@_@_._._._._._._._._@_@_._._._._._._._._._._._._._._._._._@_
-@_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._@_
-@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_
+@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_
+@_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._@_@_@_._._._._._._._._._@_@_@_._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._@_._._._._._@_@_@_._._._._._@_._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._@_._._._._@_._._._@_._._._._@_._._._._._._._._._._._._._._._._._._._._@_
+@_._@_._._._@_._._@_@_@_@_._._@_._._._._@_._._._@_._._._._@_._._._._._._._._._@_@_@_._._@_@_@_@_._._@_
+@_._._@_._@_._._@_._._._._._._@_._._._._@_._@_._@_._._._._@_._._._._._._._._@_._._._@_._@_._._._@_._@_
+@_._._._@_._._._._@_@_@_._._._@_._._._._@_._@_._@_._._._._@_._._._._._._._._@_._._._@_._@_._._._@_._@_
+@_._._._@_._._._._._._._@_._._@_._._._._@_._._._@_._._._._@_._._._._._._._._@_._._._@_._@_._._._@_._@_
+@_._._@_._@_._._._._._._@_._._@_._._._._@_._._._@_._._._._@_._._._@_@_._._._@_._._._@_._@_._._._@_._@_
+@_._@_._._._@_._@_@_@_@_._._._@_._._._._._@_@_@_._._._._._@_._._._@_@_._._._._@_@_@_._._@_._._._@_._@_
+@_._._._._._._._._._._._._._._@_._._._._._._._._._._._._._@_._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._@_@_@_._._._._._._._._._@_@_@_._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._@_
+@_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._@_
+@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_@_
 def handle_click():
     print("First button clicked!")
 ```
@@ -41,7 +43,7 @@ Yippee!
 
 ## Why on earth would I want to do this
 
-Next question
+Self-explanatory, next question
 
 ## Okay then but how do I use it
 
@@ -50,14 +52,18 @@ Stick this before your code:
 ```py
 from heckorator import _
 # Optionally customize font
-_.font("path/to/font/file")
+# _.font("path/to/font/file")
 ```
 
-And then stretch your pixel art muscles!
+And then stretch your pixel art muscles! (.....or you can use `python3 -m heckorator generate` to generate the pixel art from normal text.... but that's LAME!)
 
-`heckorator` parses the pixel data of decorators as a string of characters based on a font file which can be specified by the user. By default, it uses the [Cozette](https://github.com/slavfox/Cozette) font. The font has to be monospace, and you must include the space used for ascenders & descenders in your decorator even if your text doesn't need it.
+`heckorator` parses the pixel data of decorators as a string of characters based on a font file which can be specified by the user. By default, it uses the [Cozette](https://github.com/slavfox/Cozette) font.
 
-Oh, and do keep in mind, `heckorator` requires you put a border around your decorators! And separate each row and column of text with a gap of 1 empty pixel! It just makes it cleaner and easier to read 😄
+Oh, and do keep in mind, you have to put a border around your decorators! And separate each row and column of text with a gap of 1 empty pixel! This just makes it cleaner and easier to read 😄 You care about readability, right?
+
+## What caused you to make this wtf
+
+The noble search for clean code. I may also be bedridden with a cold, but that is only tangential.
 
 ## Licensing acknowledgements etc etc you know the drill go have fun girlies
 
