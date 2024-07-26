@@ -5,9 +5,9 @@ Python 3.9 relaxed the syntax requirements for decorator expressions, allowing a
 This initially unreadable piece of code:
 
 ```py
-xs = [Button(position=i) for i in range(10)]
+x = [Button(position=i) for i in range(10)]
 
-@xs[0].on
+@x[0].on
 def handle_click():
     print("First button clicked!")
 ```
