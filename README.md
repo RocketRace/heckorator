@@ -47,6 +47,12 @@ Self-explanatory, next question
 
 ## Okay then but how do I use it
 
+First, go get [that thang](https://pypi.org/project/heckorator/):
+
+```sh
+pip install heckorator
+```
+
 Stick this before your code:
 
 ```py
