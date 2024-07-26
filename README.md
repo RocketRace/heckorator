@@ -1,5 +1,7 @@
 # heckorator - the most readable decorators you've ever seen
 
+*Also see [my blogpost](https://rocketrace.github.io/blog/heckorator) on this*
+
 Python 3.9 relaxed the syntax requirements for decorator expressions, allowing arbitrary expressions to be placed inside decorators. Some worried users raised some concerns about the readability of such code. I think code readability matters a lot, which is why I created this library, `heckorator`! Its purpose is to make decorators a *heck* of a lot more readable!
 
 This initially unreadable piece of code:
