@@ -123,12 +123,13 @@ class heck:
                     text.append("".join(chars))
 
                 fns: list[Any] = []
-                for line in text:
+                # decorated are evaluated bottom to top
+                for line in reversed(text):
                     frame = currentframe()
                     assert frame, "sys._getframe is disabled"
                     last = frame.f_back
                     assert last, "you've got a fricked up sys._getframe implementation"
-                    fns.append(eval(line, last.f_globals, last.f_locals))
+                    fns.insert(0, eval(line, last.f_globals, last.f_locals))
                 
                 return functools.reduce(lambda x, y: y(x), fns[::-1], other.target)
             else:
